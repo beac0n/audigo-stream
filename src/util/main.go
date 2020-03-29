@@ -1,8 +1,8 @@
 package util
 
 import (
+	"audigo-stream/src/commands"
 	"regexp"
-	"remote-audio-streamer/src/commands"
 	"strconv"
 )
 

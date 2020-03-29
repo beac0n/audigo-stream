@@ -1,10 +1,10 @@
 package main
 
 import (
+	"audigo-stream/src/audioStreamer"
 	"io"
 	"log"
 	"net/http"
-	"remote-audio-streamer/src/audioStreamer"
 	"strings"
 )
 

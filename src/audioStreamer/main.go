@@ -1,12 +1,12 @@
 package audioStreamer
 
 import (
+	"audigo-stream/src/commands"
+	"audigo-stream/src/util"
 	"errors"
 	"github.com/sclevine/agouti"
 	"io"
 	"log"
-	"remote-audio-streamer/src/commands"
-	"remote-audio-streamer/src/util"
 	"strconv"
 	"strings"
 	"sync"
