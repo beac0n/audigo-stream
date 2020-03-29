@@ -23,26 +23,26 @@ func GetPulseAudioInputSinkIndexes() ([]int64, error) {
 func Difference(slice1, slice2 []int64) []int64 {
 	var diff []int64
 
-	mDiff := map[int64]byte{}
-	m1 := map[int64]byte{}
-	m2 := map[int64]byte{}
+	mapDiff := map[int64]byte{}
+	map1 := map[int64]byte{}
+	map2 := map[int64]byte{}
 
 	for _, val := range slice1 {
-		m1[val] = 1
+		map1[val] = 1
 	}
 
 	for _, val := range slice2 {
-		m2[val] = 1
+		map2[val] = 1
 	}
 
-	// we only care about elements which are in m2 but NOT in m1
-	for key, val := range m2 {
-		if val != m1[key] {
-			mDiff[key] = 1
+	// we only care about elements which are in map2 but NOT in map1
+	for key, val := range map2 {
+		if val != map1[key] {
+			mapDiff[key] = 1
 		}
 	}
 
-	for key := range mDiff {
+	for key := range mapDiff {
 		diff = append(diff, key)
 	}
 
