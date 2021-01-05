@@ -1,7 +1,3 @@
-
-install_dependencies:
-	go get ./...
-
 dev:
 	go run src/main/*.go
 
